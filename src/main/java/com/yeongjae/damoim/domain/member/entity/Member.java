@@ -21,6 +21,12 @@ import java.util.List;
  *
  * @DynamicUpdate
  * => 수정된 데이터 대해서만 update를 실행하는 쿼리를 실행하여 데이터 전송량 낭비를 줄인다.
+ *
+ * @Where(clause = "deleted=0")
+ * => deleted 속성이 0 인것만 가져온다.
+ *
+ * BIT default = 0
+ * => 값이 True , False가 아니라 0, 1로 나타나게 한다.
  */
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
