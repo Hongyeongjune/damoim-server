@@ -10,7 +10,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -34,7 +33,6 @@ import java.util.List;
 @Setter
 @Table(name = "tbl_member")
 @Entity
-@AttributeOverride(name = "id", column = @Column(name = "member_id"))
 @Where(clause = "deleted=0")
 @DynamicUpdate
 public class Member extends JpaBasePersistable implements Serializable {
